@@ -59,10 +59,10 @@ int max(int a, int b)
 void input(int n[],int s)
 {
    char *c;
-   scanf("%s",c);
+   scanf("%s",c); //input to char array to facilitate easier user input
    int i;
    for(i = 0; i < s; i++)
-      n[i] = c[i]-'0';
+      n[i] = c[i]-'0'; //conversion of those characters to integers
 }
 
 //displays an array of integers
