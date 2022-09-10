@@ -58,9 +58,11 @@ int max(int a, int b)
 //accepts the elements of an integer array
 void input(int n[],int s)
 {
+   char *c;
+   scanf("%s",c);
    int i;
    for(i = 0; i < s; i++)
-      scanf("%d",&n[i]);
+      n[i] = c[i]-'0';
 }
 
 //displays an array of integers
@@ -98,7 +100,7 @@ int *add(int n1[],int n2[],int s1,int s2)
       //swapping done using a temporary variable
       int *temp = n1; 
       n1 = n2;
-      n2 = temp; 
+      n2 = temp;
    }
 
    //the output array (holding the output number) has size = max(s1,s2)+1 
@@ -134,18 +136,6 @@ int *mult(int n1[],int n2[],int s1,int s2)
    int k,t=0; //k - index of tempOut, t = temporary var 
    int carry=0,len=s1+s2;//len - length of output number, carry holds carry in each iteration
    out = (int *)calloc(len,sizeof(int)); //output number of size s1+s2
-
-   //Always making sure that n1 has more digits than n2, or equal digits
-   if(s1<s2) 
-   {
-      //swapping done using temporary variables
-      int numTemp = s1;
-      s1 = s2;
-      s2 = numTemp;
-      int *temp = n1; 
-      n1 = n2;
-      n2 = temp; 
-   }
 
    for(i=s2-1;i>=0;i--)
    {
