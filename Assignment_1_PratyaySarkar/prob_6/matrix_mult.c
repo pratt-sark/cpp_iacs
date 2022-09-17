@@ -19,7 +19,7 @@ void allocate(Matrix * matrix)
 {
     matrix->elements = (int **)calloc(matrix->rows,sizeof(int *));
     for(int i = 0; i < matrix->rows; i++)
-        matrix->elements[i] = (int *)calloc(matrix->rows,sizeof(int));
+        matrix->elements[i] = (int *)calloc(matrix->columns,sizeof(int));
 }
 
 //to accept the matrix elements as input from user
