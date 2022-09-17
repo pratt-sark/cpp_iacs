@@ -10,7 +10,7 @@ struct matrix
 {
     int rows; //number of rows of the matrix
     int columns; //number of columns of the matrix
-    int ** elements; //double pointer to represents the elements of the matrix
+    int ** elements; //double pointer to represent the elements of the matrix
 };
 
 typedef struct matrix Matrix; //giving an alias to struct matrix
